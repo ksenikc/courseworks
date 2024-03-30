@@ -1,0 +1,65 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+Заказы клиента
+{% endblock %}
+
+
+{% block content %}
+<div class="order-list-content">
+<h2>{{ title }}</h2>
+{% if orders %}
+    <h3>Архив записей</h3>
+    <table class="table-orders">
+        <tr>
+            <td>id</td>
+            <td>created</td>
+            <td>stat</td>
+            <td>prod</td>
+            <td>description</td>
+            <td>owner</td>
+        </tr>
+    {% for elem in orders %}
+        {% if elem.created < now %}
+        <tr>
+            <td>{{ elem.id }}</td>
+            <td>{{ elem.created }}</td>
+            <td>{{ elem.stat }}</td>
+            <td>{{ elem.prod }}</td>
+            <td>{{ elem.description }}</td>
+            <td>{{ elem.owner }}</td>
+        </tr>
+        {% endif %}
+    {% endfor %}
+    </table>
+
+ <h3>Активные записи</h3>
+    <table class="table-orders">
+        <tr>
+            <td>id</td>
+            <td>created</td>
+            <td>stat</td>
+            <td>prod</td>
+            <td>description</td>
+            <td>owner</td>
+        </tr>
+    {% for elem in orders %}
+        {% if elem.created >= now %}
+        <tr>
+            <td>{{ elem.id }}</td>
+            <td>{{ elem.created }}</td>
+            <td>{{ elem.stat }}</td>
+            <td>{{ elem.prod }}</td>
+            <td>{{ elem.description }}</td>
+            <td>{{ elem.owner }}</td>
+            <td><input type="button" class="btn" value="Отменить"
+                       onclick="document.location='{% url 'ajax_change_status' elem.id %}'"></td>
+        </tr>
+        {% endif %}
+    {% endfor %}
+    </table>
+{% else %}
+<p>У нас нет записей</p>
+{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+{% if posts %}
+<div class="products">
+    <div class="container">
+        <form method="get" class="form-filter">
+            <div>
+                {{ posts.form.as_p }}
+                <button type="submit" class="btn btn-primary">Фильтровать</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="products-items">
+    {% for post in posts.qs %}
+    <div class="product-item">
+        <img width="181" height="134" src="media/{{ post.photo }}">
+        <p class="title"> {{ post.title }}</p>
+        <p class="price"><b>{{ post.price }} р.</b></p>
+        <div class="knopki">
+        {% if user.is_authenticated %}
+            <input type="button" value="Выбрать" onclick="location.href = '{% url 'orders-create' post.id %}'">
+        {% endif %}
+            <input type="button" class="model" value="О модели"
+                   onclick="location.href = '{% url 'product-detail' post.id %}'">
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>Нет записей</p>
+{% endif %}
+{% endblock content %}

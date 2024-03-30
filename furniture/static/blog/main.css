@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}
+
+.product-item {
+    border: 1px solid #B6ABAB;
+    width: 221px;
+    height: 250px;
+    border-radius: 10px;
+    margin-right: 35px;
+    margin-left: 430px;
+}
+.products-items {
+    display: grid;
+    grid-template-columns: repeat(4, 221px);
+    grid-template-rows: repeat(2, 250px);
+    gap: 36px;
+    margin-bottom: 72px;
+    
+}
+.product-item img {
+    margin-left:21px;
+    margin-top:15px;
+}
+
+.form-filter{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top:10px;
+    padding-bottom:26px;
+}
+.form-filter div {
+    display: flex;
+    margin-left: 450px;
+    margin-top: 10px;
+}
+.form-filter p {
+    margin-left: 20px;
+}
+
+.form-filter button{
+    width: 108px;
+    height: 32px;
+    top: 435px;
+    left: 254px;
+    border-radius: 5px;
+    color: white;
+    background-color: #6483F1;
+    opacity: 50.92%;
+    margin-top: -5px;
+    margin-left: 63px;
+
+}
+
+.rewievs {
+    display: grid;
+    gap: 39px;
+    grid-template-columns: repeat(2, 0.7fr);
+    grid-auto-rows: auto;
+    margin-left: 500px;
+    width: 804px;
+    margin-bottom: 81px;
+}
+
+.rewievs-item {
+    border: 1px solid #C8C6C6;
+    width: 372px;
+    border-radius: 7px;
+    margin-right: 63px;
+}
+.rewievs-item p{
+font-size: 13px;
+margin-top: 15px;
+margin-left: 15px;
+margin-bottom: 10px;
+}
+.rewievs-item p:first-child{
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.h1 {
+    text-align: center;
+    color: #56D7C7;
+    margin-top: 81px;
+    margin-bottom: 78px;
+}
+.photo {
+    width: 181px;
+    height: 134px;
+}
+.title {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.price {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    
+}
+.navbar {
+    display: flex;
+}
+.navbar-left {
+    margin-left:104px;
+    padding-top: 28px;
+}
+.navbar-left a{
+   margin-right: 30px;
+   text-decoration: none;
+   color: #615F5F;
+}
+.LOGO{
+    width: 74px;
+    height: 67px;
+    margin-left: 250px;
+    }
+
+.navbar-right {
+    padding-top: 28px;
+    margin-left: 600px;
+    
+}
+.navbar-right a{
+    margin-right: 30px;
+    text-decoration: none;
+    color: #615F5F;
+    padding-top: 28px;
+}
+.site-header,footer {
+    background-color:#C4E5F3 ;
+    height: 77px;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+    
+}
+footer p {
+    text-align: center;
+    text-decoration: none;
+    padding-top: 28px;
+}
+
+.aaa {
+    width: 165px;
+    height: 38px;
+    background-color: #AAEDB9;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 880px;
+    margin-bottom: 129px;
+    border: none;
+    padding-top: 10px;
+    padding-left: 27px;
+}
+.aa {
+    color: black;
+    text-decoration: none;
+}
+.otziv {
+    width: 649px;
+    height: 489px;
+    border: 1px solid #C8C6C6;
+    margin-left: 154px;
+    margin-top: 92px;
+    margin-bottom: 181px;
+
+}
+.otziv p {
+    border-bottom: 1px solid #C8C6C6;
+    font-size: 15;
+    margin-bottom: 59px;
+    margin-top: 37px;
+    padding-left: 47px;
+}
+.otziv button {
+    width: 124px;
+    height: 38px;
+    border:  1px solid #C8C6C6;
+    border-radius: 10px;
+    margin-left: 200px;
+    background-color: white;
+}
+.form-otziv {
+    margin-left: 47px;
+}
+
+.table-orders {
+    font-size: 16px;
+    background: white;
+    max-width: 80%;
+    width: 80%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-left: 40px;
+}
+
+.table-orders th {
+    font-weight: normal;
+    color: #039;
+    border-bottom: 2px solid #6678b1;
+    padding: 10px 8px;
+}
+
+.table-orders td {
+    color: #669;
+    padding: 9px 8px;
+    transition: .3s linear;
+}
+
+.table-orders tr:hover td {
+    color: #6699ff;
+}
+
+.table-orders__is-active {
+    font-weight: 700;
+}
+
+.btn {
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 0 13px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 14px;
+	font-weight: 500;
+	text-decoration: none;
+	color: #fff;
+	background-color: #65a3be;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;
+}
+.btn:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+.btn:hover {
+	border-color: transparent;
+	background-color: #4986a1;
+	color: #fff;
+}
+.btn:active {
+	border-color: #6f9cbc !important;
+	background-color: #367089 !important;
+}
+.btn:disabled {
+	background-color: #558cb7;
+	color: #fff;
+	pointer-events: none;
+}
+
+ .content-section form{
+    width: 350px;
+    height: 369px;
+    border: 1px solid #B6ABAB;
+    margin-top: 67px;
+    margin-left: 196px;
+    margin-bottom: 318px;
+}
+.ozuv h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 33px;
+    margin-left: 47px;
+    margin-bottom: 38px;
+}
+.voeti {
+    width: 124px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #B6ABAB;
+    border-radius: 7px;
+    font-size:14px ;
+    margin-left: 10px;
+}
+
+.form-group{
+    border: none;
+    color: black;
+}
+#div_id_username {
+    margin-bottom: 15px;
+}
+
+#div_id_password {
+    margin-bottom: 23px;
+}
+.vhod {
+    margin-left: 10px;
+    margin-top: 41px;
+}
+.text-muted a{
+     color: black;
+}
+
+.knopki {
+    display: flex;
+    justify-content: space-around;
+    
+}
+.knopki input {
+    width: 90px;
+    height: 22px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    margin-left: 5px;
+    margin-top: 10px;
+    padding-left: 10px;
+}  
+.reg {
+    width: 124px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #6BB9A2;
+    border-radius: 7px;
+    color: #6BB9A2;
+    margin-left: 47px;
+    margin-bottom: 54px;
+}
+.content-section_reg  {
+    height: 518px;
+    width: 550px;
+    margin-top: 68px;
+    margin-left:196px;
+    border: 1px solid #B6ABAB;
+    padding-top: 22px;
+}
+.forr {
+    padding-left: 10px;
+}
+.forr input{
+    margin-bottom: 19px;
+}
+.forr input{
+    color: #B6ABAB;
+}
+.form-text ul {
+    margin-left: 43px;
+    color: #595555;
+    font-size: 10px;
+}
+.tttt {
+    color: #686A6D;
+    margin-left: 47px;
+    
+}
+.vvho {
+    color: #2400FF;
+}
+.model {
+    width: 90px;
+    height: 22px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid black;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+.ddd {
+    margin-left: 700px;
+    border: 1px solid #B6ABAB;
+    width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.gg {
+    margin-left: 10px;
+    margin-top: 40px;
+}
+.pred {
+    margin-left: 10px;
+}
+.otpr {
+    width: 124px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #6BB9A2;
+    border-radius: 7px;
+    color: #6BB9A2;
+    margin-bottom: 40px;
+    margin-left: 10px;
+
+}
+.sss {
+    margin-left: 30px;
+    margin-top: 30px;
+    color: #039;
+}
+.form-group-one {
+    border: none;
+}
+.obn {
+    margin-top: 10px;
+    background-color: #739ebe;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 7px;
+    margin-left: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+.content-sections {
+    margin-left: 500px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 1px solid #B6ABAB;
+    width: 550px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.avt {
+    margin: 0;
+}
+.vh {
+    margin-left: 10px;
+}
+.vihod {
+    margin-top: 30px;
+    margin-left: 61px;
+}
+.vih {
+    margin-left: 61px;
+    width: 50px;
+    height: 30px;
+    font-size: 20px;
+}

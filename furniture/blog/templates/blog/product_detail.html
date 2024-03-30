@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<h2 class="sss">Подробнее о модели</h2>
+<table class="table-orders">
+<tr>
+    <th>Параметр</th>
+    <th>Значение</th>
+</tr>
+
+<tr class="table-orders__is-active"><td>Название:</td><td>{{ object.title }}</td></tr>
+<img width="500"  height="485" src="/media/{{ object.photo }}">
+<tr class="table-orders__is-active"><td>Описание:</td><td>{{ object.description }}</td></tr>
+<tr><td>Цена:</td><td>{{ object.price }} р.</td></tr>
+
+</table>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<h1 class="h1">ОТЗЫВЫ</h1>
+{% if reviews %}
+<div class="rewievs">
+{% for review in reviews %}
+        <article class="rewievs-item">
+            <p> {{ review.author }}</p>
+            <p> {{ review.content }}</p>
+        </article>
+{% endfor %}
+</div>
+{% else %}
+    <p>Нет записей</p>
+{% endif %}
+    {% if user.is_authenticated %}
+        <div class="aaa"> <a class="aa" href="{% url 'post-create' %}">Написать отзыв</a></div>
+    {% endif %}
+{% endblock content %}
